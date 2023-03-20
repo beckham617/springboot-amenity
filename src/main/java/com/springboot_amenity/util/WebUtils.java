@@ -1,4 +1,4 @@
-package io.bootify.springboot_amenity.util;
+package com.springboot_amenity.util;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.constraints.NotNull;

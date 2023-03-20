@@ -1,4 +1,4 @@
-package io.bootify.springboot_amenity.util;
+package com.springboot_amenity.util;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
