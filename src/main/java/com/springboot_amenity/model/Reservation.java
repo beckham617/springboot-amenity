@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -50,12 +51,15 @@ public class Reservation {
     )
     private Long id;
 
-    @Column
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @Column(nullable = false)
     private LocalDate reservationDate;
 
+    @DateTimeFormat(pattern = "HH:mm")
     @Column
     private LocalTime startTime;
 
+    @DateTimeFormat(pattern = "HH:mm")
     @Column
     private LocalTime endTime;
 

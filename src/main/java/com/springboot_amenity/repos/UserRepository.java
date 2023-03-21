@@ -6,4 +6,5 @@ import com.springboot_amenity.model.User;
 
 
 public interface UserRepository extends JpaRepository<User, Long> {
+	User findUserByUserName(String username);
 }

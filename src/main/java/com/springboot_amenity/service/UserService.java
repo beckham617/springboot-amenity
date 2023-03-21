@@ -27,6 +27,10 @@ public class UserService {
 		return userRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
 	}
 
+	public User getUserByUsername(String username) {
+        return userRepository.findUserByUserName(username);
+    }
+	
 	public Long create(final User user) {
 		return userRepository.save(user).getId();
 	}
